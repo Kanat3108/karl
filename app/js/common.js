@@ -1,37 +1,14 @@
 $(function() {
+	$('#pagepiling').pagepiling({
+		navigation: {
+            'textColor': '#000',
+            'position': 'right',
+            'tooltips': ['section1', 'section2', 'section3', 'section4']
+        },
+	});
 
-	var
-		screen = 0,
-		pages = $('.page'),
-		container = $('.main-content'),
-		inscroll = false;
 	if ($(window).width() > 480){
-		$('.page:first-child').addClass('active');	
-		$('body').on('mousewheel', function(event){
-			var 
-				activePage = pages.filter('.active');
-			
-			if(!inscroll){
-				inscroll = true;
-				if(event.deltaY > 0){
-					if (activePage.prev().length) {
-						screen--;
-					}
-				}else{
-					if (activePage.next().length) {
-					screen++;
-					}
-				}
-			}
-			var
-				position = (-screen * 100) + "%";
-
-			pages.eq(screen).addClass('active').siblings().removeClass('active');
-			container.css('top', position);
-			setTimeout(function(){
-					inscroll = false;
-				},1500);
-		});
+		
 		$('body').on('mousewheel', function(event){
 		if ($('.section-4').hasClass('active')) {
 	    	$("video").get(0).play()
@@ -56,7 +33,6 @@ $(function() {
 			$('h2').removeClass('anim-s3-txt');
 		}
 	});
-	$("video").get(0).play()
 
 	
 

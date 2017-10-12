@@ -70,6 +70,12 @@ body
 	height: 100%
 	position: relative
 
+#pp-nav
+	right: -6px !important
+	li
+		.active
+			span
+				background-color: red !important
 
 .section-1
 	.header
@@ -256,12 +262,18 @@ body
 
 
 .section-3
-	display: grid
-	grid-template-columns: 1fr 1fr 1fr 1fr
-	grid-template-rows: 1fr 1fr
+	height: 100%
+	display: block
 	height: 100%
 	position: relative
-	grid-gap: 20px
+	background-color: #fff
+	.wrap-s3
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr 1fr
+		grid-template-rows: 1fr 1fr
+		grid-gap: 20px
+		height: 100%
+		width: 100%
 	.effect-romeo
 		perspective: 1000px
 		img
@@ -381,35 +393,40 @@ body
 
 /* Common style */
 .section-4
-	display: grid
-	grid-template-columns: 1fr 1fr 
-	grid-template-rows: 1fr 1fr
 	height: 100%
+	display: block
 	position: relative
-	grid-gap: 10px
-	.s41-img
-		grid-row: 1/3
-		display: block
+	width: 100%
+	.wrap-s4
+		display: grid
+		grid-template-columns: 1fr 1fr 
+		grid-template-rows: 1fr 1fr
+		grid-gap: 10px
 		width: 100%
 		height: 100%
-		position: relative
-		top: 0
-		right: 0
-		bottom: 0
-		left: 0
-		overflow: hidden
-		video
-			width: auto
-			height: auto
-			position: absolute
-			top: 50%
-			left: 50%
-			transform: translateX(-50%) translateY(-50%)
-	.s42-img
-		grid-column: 2
-		grid-row: 2
-	.s43-img
-		grid
+		.s41-img
+			grid-row: 1/3
+			display: block
+			width: 100%
+			height: 100%
+			position: relative
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			overflow: hidden
+			video
+				width: auto
+				height: auto
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translateX(-50%) translateY(-50%)
+		.s42-img
+			grid-column: 2
+			grid-row: 2
+		.s43-img
+			grid
 section
 	padding: 20px
 
